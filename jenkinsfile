@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git url: 'https://github.com/SHAIKGOWSIYA/sensiple-git-assignment.git'
+            }
+        }
+        stage('Run Addition Script') {
+            steps {
+                sh 'python addition.py'
+            }
+        }
+        stage('Run Subtraction Script') {
+            steps {
+                sh 'python subtraction.py'
+            }
+        }
+    }
+}
