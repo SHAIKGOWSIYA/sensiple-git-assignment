@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Run Addition Script') {
             steps {
-                bat 'python addition.py'
+                sh 'python addition.py'
             }
         }
         stage('Run Subtraction Script') {
             steps {
-                bat 'python subtraction.py'
+                sh 'python subtraction.py'
             }
         }
     }
